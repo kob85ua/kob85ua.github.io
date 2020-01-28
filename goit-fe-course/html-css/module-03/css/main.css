@@ -84,7 +84,6 @@ ul>li {
 }
 .btn {
     width: 160px;
-    text-rendering: auto;
     color: #000000;
     letter-spacing: normal;
     word-spacing: normal;
