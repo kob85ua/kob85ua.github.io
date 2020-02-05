@@ -140,6 +140,11 @@ ul>li {
 .price_name::before {
     content: '\024';
 }
+.product:hover {
+    
+    cursor: pointer;
+    
+  }
 
 .product:hover >.prod_img_block + .prod_info .prod_name{
     background:  rgb(26, 188, 156);
