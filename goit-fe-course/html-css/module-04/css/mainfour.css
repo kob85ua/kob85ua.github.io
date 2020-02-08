@@ -148,13 +148,13 @@ ul>li {
   }
 
 .product:hover >.prod_img_block + .prod_info .prod_name{
-    background:  rgb(26, 188, 156);
-    transition: all .3s linear;
+    background-color:  rgb(26, 188, 156);
+    transition:  .3s linear;
     cursor: pointer;
   }
 .product:hover >.prod_img_block + .prod_info .prod_price{
-    background:   rgb(127, 217, 199);
-    transition: all .3s linear;
+    background-color:   rgb(127, 217, 199);
+    transition:  .3s linear;
     cursor: pointer;
   }
 .container01::after {
@@ -182,8 +182,6 @@ ul>li {
 .news_header  {
     font-size: 18px;
     color: rgb(85, 82, 82);
-    text-transform: none;
-    text-align: left;
     line-height: 1.5;
 }
   .news_name::after {
@@ -206,7 +204,7 @@ ul>li {
     margin-bottom: 20px;
 }
 .btn {
-    text-rendering: auto;
+    
     color: rgb(255, 255, 255);
     display: inline-block;
     text-align: center;
