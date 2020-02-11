@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    align-self: center;
+    width: 1600px;
+    text-transform: uppercase;
+    background-color: #e9f0fd;
+    position: relative;
+}
+
+.header {
+    width: 1140px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 245px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20px;
+    width: 600px;
+    bottom: 35px;
+    right: 15px;
+    position: absolute;
+
+  }
+.menu_item  {
+    justify-content: space-between;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+.menu_item :hover  {
+    color:rgb(26, 188, 156);
+}
+/* take off li dots  */
+ul>li {
+    list-style-type: none;
+}
+.menu_item_link {
+    color: rgb(81, 81, 81);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.logo {
+    width: 85px;
+    height: 30px;
+    top: 25px;
+    position: absolute;
+
+}
+.logo_text {
+    font-size: 30px;
+    font-weight: 300;
+}
+.logo_text::first-letter {
+    color: rgb(26, 188, 156);
+    font-weight: 600;
+} 
+.tour_block {
+    display: flex;
+    width: 1600px;
+    height: 602px;
+    position: absolute;
+    background-image:url(../img/bg01.png);
+    top: 90px;
+    align-items: center;
+    justify-content: center;
+}
+.tour {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 60px;
+    width: 1110px;
+    height: 120px;
+    z-index: 10;
+}
+.tour_info {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.block_left_button,  .block_right_button {
+    height: 105px;
+    overflow:hidden;
+}
+.info_text {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.links {
+    font-size: 30px;
+    font-weight: 100;
+}
+.right_button,  .left_button {
+    background-color: rgb(26, 188, 156);
+    opacity: 50%;
+    border: none;
+    cursor: pointer;
+    
+    
+} 
+.block_left_button:hover {
+    background-color: rgb(26, 188, 156);
+}
+.block_right_button:hover {
+    background-color: rgb(26, 188, 156); 
+}
+.shop {
+    position: absolute;
+    top: 692px;
+    left: 800px;
+    transform: translateX(-50%);
+   
+} 
+
+.article_header {
+    margin-top: 110px;
+    margin-bottom: 85px;
+}
+.article_header::after {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background:  rgb(26, 188, 156);
+
+}
+
+.article_name {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-align: center;
+}
+
+.product {
+    width: 255px;
+    height: 320px;
+    position: relative;
+}
+
+.prod_img_block {
+    width: 255px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.prod_img {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.prod_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+.prod_name {
+    padding-left: 15px;
+    width: 200px;
+    height: 40px;
+    background:rgb(50, 50, 50);
+    display: flex;
+    align-items: center;
+}
+.prod_price {
+    width: 55px;
+    height: 40px;
+    padding-left: 15px;
+    background:rgb(140, 140, 140);
+    display: flex;
+    align-items: center;
+}
+.text_name {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+  }
+.price_name {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: left; 
+}
+.price_name::before {
+    content: '\024';
+}
+.product:hover {
+    cursor: pointer;
+}
+.product:hover >.prod_img_block + .prod_info .prod_name{
+    background-color:  rgb(26, 188, 156);
+    transition:  .3s linear;
+    cursor: pointer;
+}
+.product:hover >.prod_img_block + .prod_info .prod_price{
+    background-color:   rgb(127, 217, 199);
+    transition:  .3s linear;
+    cursor: pointer;
+}
+/* hover card */
+.hcard {
+    width: 255px;
+    height: 280px;
+    border: 10px solid #fff;
+    /* position: absolute; */
+    position: relative;
+    top: -320px;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product:hover > .hcard {
+    opacity: 1;
+    transition: .3s linear;
+}
+/* hover card end */
+/* btn block */
+.cardbtns {
+    width: 160px;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    
+}
+.btn:hover {
+    background-color:  rgb(26, 188, 156);
+    transition: .3s linear;
+}
+.add_to_cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    background-color: #323232;
+}
+.add_to_cart:hover {
+    background-color:  rgb(26, 188, 156);
+    transition: .3s linear;
+}
+.add_to_cart_text {
+    color: #ffffff;
+}
+.container01 {
+    display: flex;
+    justify-content: space-around;
+    width: 1140px;
+    height: 420px;
+}
+.arr {
+    width: 1600px;
+    height: 90px;
+    background-color: #323232;
+    position: relative;
+    top: 1280px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arr_block {
+    display: flex;
+    flex-direction: row;
+    width: 395px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.arr_text {
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: capitalize;
+    cursor: default;
+}
+.arr_block :nth-child(2) :hover {
+    color:  rgb(26, 188, 156);
+    cursor: pointer;
+}
+.arr_block  :nth-child(5) :hover {
+    color:  rgb(26, 188, 156);
+    cursor: pointer;
+}  
+
+  
