@@ -36,7 +36,7 @@ body {
 
   }
 .menu_item  {
-    justify-content: space-between;
+    
     width: 100px;
     text-align: center;
     text-decoration: none;
@@ -85,11 +85,11 @@ ul>li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     color: #ffffff;
     font-size: 60px;
     width: 1110px;
-    height: 120px;
+    height: 130px;
     z-index: 10;
 }
 .tour_info {
@@ -97,6 +97,7 @@ ul>li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 10px;
 }
 .block_left_button,  .block_right_button {
     height: 105px;
