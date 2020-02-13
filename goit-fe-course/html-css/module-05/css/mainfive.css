@@ -61,7 +61,6 @@ ul>li {
     height: 30px;
     top: 25px;
     position: absolute;
-
 }
 .logo_text {
     font-size: 30px;
@@ -76,7 +75,8 @@ ul>li {
     width: 1600px;
     height: 602px;
     position: absolute;
-    background-image:url(../img/bg01.png);
+    background-image:linear-gradient( rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url(../img/bg01.png);
+    background-size: cover;
     top: 90px;
     align-items: center;
     justify-content: center;
