@@ -214,20 +214,18 @@ ul>li {
 .cardbtns {
   width: 228px;
   height: 56px;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .btn {
- background-color: #fce38a;
- display: flex;
- align-items: center;
- justify-content: center;
- width: 56px;
- height: 56px;
-  
+  background-color: #fce38a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
 }
 .btn:hover {
   background-color:#95e1d3;
@@ -320,6 +318,7 @@ input {
   
 }
 ::placeholder {
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
   color: rgb(204, 204, 204);
   font-style: italic;
