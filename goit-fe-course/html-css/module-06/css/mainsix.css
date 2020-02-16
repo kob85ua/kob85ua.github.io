@@ -311,6 +311,7 @@ ul>li {
   font-weight: bold;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 input {
   width: 230px;
@@ -323,5 +324,6 @@ input {
   color: rgb(204, 204, 204);
   font-style: italic;
   text-indent:10px;
+
 }
 
