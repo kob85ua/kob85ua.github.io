@@ -8,20 +8,25 @@ body {
     font-size: 100%;
     font-weight: normal;
     align-self: center;
-    width: 1600px;
+    width: 100%;
     text-transform: uppercase;
     background-color: #e9f0fd;
     position: relative;
 }
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .header {
-    width: 1140px;
-    height: 90px;
+    width:1140px;
+    height: 60px;
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
     justify-content: space-between;
-    left: 245px;
-    position: relative;
+    margin-bottom: 30px;
+  
 }
 
 .menu {
@@ -32,7 +37,7 @@ body {
     width: 600px;
     bottom: 35px;
     right: 15px;
-    position: absolute;
+   
 
   }
 .menu_item  {
@@ -59,8 +64,7 @@ ul>li {
 .logo {
     width: 85px;
     height: 30px;
-    top: 25px;
-    position: absolute;
+  
 }
 .logo_text {
     font-size: 30px;
@@ -72,14 +76,17 @@ ul>li {
 } 
 .tour_block {
     display: flex;
-    width: 1600px;
+    justify-content: center;
+    width: 100%;
     height: 602px;
     position: absolute;
     background-image:linear-gradient( rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url(../img/bg01.png);
     background-size: cover;
     top: 90px;
+    background-position: -90px 25px;
     align-items: center;
     justify-content: center;
+    z-index: 30;
 }
 .tour {
     display: flex;
@@ -126,11 +133,14 @@ ul>li {
 .block_right_button:hover {
     background-color: rgb(26, 188, 156); 
 }
+.shop-wrapper {
+    display: flex;
+    justify-content: center;
+}
 .shop {
     position: absolute;
-    top: 692px;
-    left: 800px;
-    transform: translateX(-50%);
+    top: 652px;
+    
    
 } 
 
@@ -229,7 +239,6 @@ ul>li {
     width: 255px;
     height: 280px;
     border: 10px solid #fff;
-    /* position: absolute; */
     position: relative;
     top: -320px;
     left: 0;
@@ -292,21 +301,24 @@ ul>li {
     height: 420px;
 }
 .arr {
-    width: 1600px;
+    width: 100%;
     height: 90px;
     background-color: #323232;
     position: relative;
     top: 1280px;
+    
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .arr_block {
+    
+    left: 115px;
     display: flex;
     flex-direction: row;
     width: 395px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     
 }
@@ -316,6 +328,7 @@ ul>li {
     color: #ffffff;
     text-transform: capitalize;
     cursor: default;
+    font-size: 16px;
 }
 .arr_block :nth-child(2) :hover {
     color:  rgb(26, 188, 156);
