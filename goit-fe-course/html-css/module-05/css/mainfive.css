@@ -90,7 +90,7 @@ ul>li {
     z-index: 30;
 }
 .tour {
-    justify-self: -20px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
