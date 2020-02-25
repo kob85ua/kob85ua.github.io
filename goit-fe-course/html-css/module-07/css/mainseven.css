@@ -251,9 +251,25 @@ ul>li {
   /* text-indent:10px; */
   /* padding-top: 15px; */
 }
-input:invalid {
+.form-shape:invalid:focus {
   /* background-color: rgb(223, 115, 115); */
-  border: 3px solid red;
-  
-}
+  outline: 3px solid red;
+  outline-offset: -8px;
 
+}
+.form-shape:valid:focus {
+  /* background-color: rgb(223, 115, 115); */
+  outline: 3px solid green;
+  outline-offset: -8px;
+}
+.form-shape01:invalid:focus {
+  /* background-color: rgb(223, 115, 115); */
+  outline: 3px solid red;
+  outline-offset: -8px;
+
+}
+.form-shape01:valid:focus {
+  /* background-color: rgb(223, 115, 115); */
+  outline: 3px solid green;
+  outline-offset: -8px;
+}
