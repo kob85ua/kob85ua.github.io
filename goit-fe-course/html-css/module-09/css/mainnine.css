@@ -101,7 +101,11 @@ ul>li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* width: 320px; */
+}
+.tagline-size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tagline01 {
   
@@ -137,9 +141,9 @@ ul>li {
 }
 .user-info {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
   padding: 0;
 }
 .header01 {
@@ -159,7 +163,6 @@ ul>li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 220px; */
   margin-bottom: 30px;
 }
 .user-foto {
@@ -186,6 +189,8 @@ ul>li {
   color: rgb(102, 102, 102);
   text-align: center;
   font-weight: 300;
+  width: 220px;
+
   
 }
 .tv-icon::after {
@@ -295,21 +300,21 @@ ul>li {
   .site-name {
     text-align: left;
   }
-  /* .tagline {
-    width: 532px;
-    
-  }  */
+  
   .tagline01 {
     font-size: 52px;
     margin-bottom: 35px;
   }
   .tagline02 {
-    width: 492px;
+  
     font-size: 24px;
     margin-bottom: 35px;
   }
   .btn01 {
     width: 225px;
+  }
+  .user-info {
+    width: 492px;
   }
   
   .user-info-block {
@@ -319,17 +324,18 @@ ul>li {
     justify-content: flex-start;
     flex-wrap: wrap;
     height: 500px;
+    width: 100%;
     margin-bottom: 40px;
-    margin-right: auto;
-    margin-left: auto;
   }
   .user {
     height: 236px;
     margin-bottom: 0px;
+    
   }
   .btn02 {
     width: 195px;
     margin-bottom: 40px;
+    
   }
 }
 @media (min-width: 992px) {
