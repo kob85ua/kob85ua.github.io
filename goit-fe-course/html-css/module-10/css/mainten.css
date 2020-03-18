@@ -214,7 +214,6 @@ ul>li {
 .cardbtns {
   width: 228px;
   height: 56px;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -225,13 +224,11 @@ ul>li {
  fill: #fce38a;
  background-color:#f38181;
  display: block;
- /* align-items: center;
- justify-content: center; */
  width: 56px;
  height: 56px;
 }
 .btn:hover {
-  fill: #fce38a;
+  fill: #f38181;
   background-color:#ffffff;
   transition: .2s linear;
 }
