@@ -219,12 +219,11 @@ ul>li {
   align-items: center;
   justify-content: space-between;
 }
-use path#line {
-  stroke: #009966;
-}
+
 
 .btn {
- fill: red;
+ fill: #fce38a;
+ background-color:#f38181;
  display: block;
  /* align-items: center;
  justify-content: center; */
@@ -232,13 +231,11 @@ use path#line {
  height: 56px;
 }
 .btn:hover {
-  background-color:#95e1d3;
+  fill: #fce38a;
+  background-color:#ffffff;
   transition: .2s linear;
 }
-.s-network-icon {
-  width: 56px;
-  height: 56px;
-}
+
 .member-info {
   width: 100%;
   height: 70px;
