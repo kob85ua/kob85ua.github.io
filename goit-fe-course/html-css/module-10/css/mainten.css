@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 1200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  align-self: center;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 85px;
+}
+/* take off li dots  */
+ul>li {
+  list-style-type: none;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 490px;
+  
+}
+.menu-item  {
+  display: flex;
+  align-items: center;
+  /* height: 100%; */
+}
+.menu-item :hover  {
+  display: flex;
+  align-items: center;
+  color:#f38181;
+  cursor: pointer;
+  padding-bottom: 12px;
+  border-bottom:3px solid #f38181;
+  transform: translateY(7px);
+}
+
+.menu-item-link {
+  font-family: 'Montserrat', sans-serif;
+  color: #95e1d3;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateY(-7px);
+}
+.logo-text {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: #95e1d3;
+  text-transform: none;
+  font-weight: bold;
+}
+.activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.we-work-with, .who-we-are {
+  text-transform: none;
+  text-align: center;
+  width: 100%;
+  font-size: 24px;
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(51, 51, 51);
+  margin-bottom: 20px;
+}
+.amazing-services {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(51, 51, 51); 
+  font-weight: bold;
+  margin-bottom: 110px;
+}
+.amazing-services::after, .meet-our-team::after {
+  content: "";
+  display: block;
+  background:#f38181;
+  height: 3px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.service-item {
+  display: flex;
+  justify-content: flex-start;
+  width: 383px;
+  height: 75px;
+  margin-bottom: 105px;
+}
+.service-svg-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 83px;
+  height: 75px;
+}
+.icon {
+  transform: translateX(20px);
+}
+.service-text-block {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service-name {
+  width: 100%;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+.service-text {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(153, 153, 153);
+  text-transform: none;
+}
+.about-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.meet-our-team {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(51, 51, 51); 
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+.text-team-info {
+  text-align: center;
+  width: 950px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(153, 153, 153);
+  text-transform: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+}
+.team-member-card {
+  width: 381px;
+  height: 545px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.foto-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 381px;
+  height: 475px;
+  overflow: hidden;
+  position: relative;    
+  /* line-height: 0; */
+}
+
+.foto-block:hover {
+  transform: translate(-13px, -13px);
+  box-shadow: 13px 13px #95e1d3;
+  transition:  .2s linear;
+  cursor: pointer;
+}
+
+.hcard {
+  width: 381px;
+  height: 475px;
+  background: linear-gradient(to bottom, #ef8b8a,#e5d183); 
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.foto-block:hover > .hcard {
+  opacity: 0.8;
+  transition: .2s linear;
+}
+.cardbtns {
+  width: 228px;
+  height: 56px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+use path#line {
+  stroke: #009966;
+}
+
+.btn {
+ fill: red;
+ display: block;
+ /* align-items: center;
+ justify-content: center; */
+ width: 56px;
+ height: 56px;
+}
+.btn:hover {
+  background-color:#95e1d3;
+  transition: .2s linear;
+}
+.s-network-icon {
+  width: 56px;
+  height: 56px;
+}
+.member-info {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.name {
+  width: 100%;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.job {
+  width: 100%;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;;
+  color: rgb(153, 153, 153);
+  text-transform: none;
+  text-align: center;
+  font-style: italic;
+}
+.team {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+.foto01 {
+  transform: translateX(130px);
+}
+.foto02 {
+  transform: translateX(-10px);
+  transform: translateY(-50px);
+}
+.foto03 {
+  transform: translateX(80px);
+  transform: translateY(50px);
+}
+.footer {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  border-top: 1px solid  rgb(153, 153, 153);
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright-info, .link {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(51, 51, 51);
+  text-transform: none;
+  text-decoration: none;
+  cursor: default;
+}
+.link:hover {
+  color:#f38181;;
+  cursor: pointer;
+}
+.feedback {
+  width: 380px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.s-btn {
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+input {
+  width: 230px;
+  height: 40px;
+  
+}
+::placeholder {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(204, 204, 204);
+  font-style: italic;
+  text-indent:10px;
+}
+
