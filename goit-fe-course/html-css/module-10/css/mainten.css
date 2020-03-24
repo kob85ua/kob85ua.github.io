@@ -543,13 +543,13 @@ ul>li {
 .copyright-info, .link {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  color: rgb(51, 51, 51);
+  color: rgb(168, 133, 133);
   text-transform: none;
   text-decoration: none;
   cursor: default;
 }
 .link:hover {
-  color:#f38181;;
+  color:#f38181;
   cursor: pointer;
 }
 .feedback {

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Proxima Nova Light'), local('ProximaNova-Light'), url(../fonts/ProximaNovaLight.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Proxima Nova Regular'), local('ProximaNova-Regular'), url(../fonts/ProximaNovaRegular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'), url(../fonts/ProximaNovaSemibold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url(../fonts/ProximaNovaBold.otf) format('opentype');
+}

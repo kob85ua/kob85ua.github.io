@@ -1,0 +1,21 @@
+header {
+    background: transparent;
+    position: absolute;
+    right: 30px;
+    top: 70px
+  }
+  
+  menu {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .menu-item {
+    list-style-type: none;
+    margin: 0 30px;
+    &__link {
+      color: #fff;
+      font-weight: bolder;
+      font-size: 14px;
+    }
+  }
