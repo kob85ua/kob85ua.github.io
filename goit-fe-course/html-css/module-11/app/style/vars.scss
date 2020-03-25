@@ -6,27 +6,31 @@ $font-main-bold-xxlarge: normal bold 150px 'Montserrat', sans-serif;
 $font-tagline-normal-medium: normal normal 24px 'Kaushan Script', cursive;
 $font-tagline-normal-large: normal normal 72px 'Kaushan Script', cursive;
 $font-info-normal-small: normal normal 15px "Roboto", sans-serif;
+$font-info-italic-small: italic normal 15px "Roboto", sans-serif;
 
 $color-main: #ffffff;
+// for menu hover, member social media icons fill & bg hover
 $color-menu-hover: #fce38a;
+
 $color-bg-img-lgr-1:rgba(232, 129, 130, .8);
 $color-bg-img-lgr-2:rgba(240, 217, 138, .8);
 $color-bg-learn-more-btn: none;
-$color-block-header: rgb(51, 51, 51);
-$color-after-block-header: #f38181;
-$color-service-name:rgb(51, 51, 51);
+
+// for text headers & member names
+$color-text-header: rgb(51, 51, 51);
+
+$color-after: #f38181;
+
+// for info service & member text
 $color-service-text: rgb(153, 153, 153);
+
+// for service icons, photo shadows, subscribe btn
 $color-service-icon:rgb(149, 225, 211);
-$color-foto-shadow:#95e1d3;
-$color-bg-foto-lgr-1: #ef8b8a;
-$color-bg-foto-lgr-2: #e5d183;
-$color-btn-fill: #fce38a;
-$color-btn-bg:#f38181;
-$color-btn-fill-hover: #f38181;
-$color-btn-bg-hover: #ffffff;
-$color-member-name: rgb(51, 51, 51);
-$color-member-job: rgb(153, 153, 153);
-$color-footer-border: rgb(153, 153, 153);
-$color-footer-text: rgb(168, 133, 133);
-$color-footer-text-hover: #f38181;
-$color-s-btn-bg: #95e1d3;
+
+
+$color-bg-foto-lgr-1: rgb(239, 139, 138);
+$color-bg-foto-lgr-2: rgb(229, 209, 131);
+
+$color-placeholder-text:rgb(204, 204, 204);
+
+
