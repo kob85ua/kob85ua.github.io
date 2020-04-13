@@ -4,21 +4,23 @@ const pricePerDroid = 3000;
 let alertMessage;
 const custоmerOrder = prompt('Количество дройдов, которые Вы хотите купить?');
 
-const totalPrice = custоmerOrder * pricePerDroid;
-
-const creditsLeft = credits - totalPrice;
-if (totalPrice > credits) {
-	alertMessage = 'Недостаточно средств на счету!';
-} else if (custоmerOrder === null) {
+if (custоmerOrder === null) {
 	alertMessage = 'Отменено пользователем!';
-} else if (
-	isNaN(custоmerOrder) ||
-	custоmerOrder <= 0 ||
-	custоmerOrder % 1 != 0
-) {
-	alertMessage = 'Введите натуральное число';
 } else {
-	alertMessage = `Вы купили ${custоmerOrder} дроидов, на счету осталось ${creditsLeft} кредитов.`;
+	const totalPrice = custоmerOrder * pricePerDroid;
+
+	const creditsLeft = credits - totalPrice;
+	if (totalPrice > credits) {
+		alertMessage = 'Недостаточно средств на счету!';
+	} else if (
+		isNaN(custоmerOrder) ||
+		custоmerOrder <= 0 ||
+		custоmerOrder % 1 != 0
+	) {
+		alertMessage = 'Введите натуральное число';
+	} else {
+		alertMessage = `Вы купили ${custоmerOrder} дроидов, на счету осталось ${creditsLeft} кредитов.`;
+	}
 }
 
 alert(alertMessage);
