@@ -46,11 +46,7 @@ console.log('______Task05______');
 //  Method find
 
 const getUserWithEmail = (users, email) =>
-	users.find((user) => {
-		if (user.email === email) {
-			return user;
-		}
-	});
+	users.find((user) => user.email === email);
 
 console.table(getUserWithEmail(usersData, 'shereeanthony@kog.com'));
 
@@ -59,11 +55,7 @@ console.table(getUserWithEmail(usersData, 'elmahead@omatom.com'));
 console.log('______Task06______');
 //  Method filter
 const getUsersWithAge = (users, min, max) =>
-	users.filter((user) => {
-		if (user.age >= min && user.age <= max) {
-			return user;
-		}
-	});
+	users.filter((user) => user.age >= min && user.age <= max);
 
 console.table(getUsersWithAge(usersData, 20, 30));
 
@@ -84,7 +76,7 @@ console.log('______Task08______');
 
 const getUsersWithFriend = (users, friendName) =>
 	users.reduce((commonFriends, user) => {
-		if (user.friends.some((friend) => friend === friendName) === true) {
+		if (user.friends.some((friend) => friend === friendName)) {
 			commonFriends.push(user.name);
 		}
 
@@ -95,12 +87,14 @@ console.table(getUsersWithFriend(usersData, 'Briana Decker'));
 console.table(getUsersWithFriend(usersData, 'Goldie Gentry'));
 
 console.log('______Task09______');
-//  Method reduce as sort in map
+//  Method reduce as sort in reduce
 const getNamesSortedByFriendsCount = (users) =>
-	users.reduce((moreSociableUsers, user) => {
-		user.friends.length - user.friends.length;
-		moreSociableUsers.push(user.name);
-		return moreSociableUsers;
+	users.reduce((fromLesstoMoreSociableUsers, user) => {
+		users.sort((userA, userB) => userA.friends.length - userB.friends.length);
+
+		fromLesstoMoreSociableUsers.push(user.name);
+
+		return fromLesstoMoreSociableUsers;
 	}, []);
 
 console.table(getNamesSortedByFriendsCount(usersData));
