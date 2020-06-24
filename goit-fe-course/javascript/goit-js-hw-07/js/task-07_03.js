@@ -21,10 +21,10 @@ const images = [
 ];
 
 const addImages = images.map((image) => {
-	document
-		.querySelector('#gallery')
-		.insertAdjacentHTML(
-			'afterbegin',
-			`<li><img src="${image.url}" alt="${image.alt}"></li>`
-		);
+	return `<li><img src="${image.url}" alt="${image.alt}"></li>`;
 });
+
+document
+	.querySelector('#gallery')
+	.insertAdjacentHTML('afterbegin', addImages.join(''));
+console.log(document.querySelector('#gallery'));

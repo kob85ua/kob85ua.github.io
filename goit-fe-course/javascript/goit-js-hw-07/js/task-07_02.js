@@ -12,8 +12,10 @@ const ingredients = [
 ];
 document.querySelector('#ingredients').innerText = 'Ингридиенты';
 
-const addIngredients = ingredients.forEach((ingredient) => {
-	const ingredientToAdd = document.createElement('li');
-	ingredientToAdd.innerText = ingredient;
-	document.querySelector('#ingredients').appendChild(ingredientToAdd);
+const addIngredients = ingredients.map((ingredient) => {
+	return `<li>${ingredient}</li>`;
 });
+
+document
+	.querySelector('#ingredients')
+	.insertAdjacentHTML('beforeend', addIngredients.join(''));

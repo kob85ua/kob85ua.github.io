@@ -7,7 +7,7 @@ const number = categoriesByID.childElementCount;
 
 console.log(`В списке ${number} категории.`);
 
-const itemsListInfo = Array.from(categoriesByID.children).map(
+const itemsListInfo = Array.from(categoriesByID.children).forEach(
 	(itemsInCategories) => {
 		const itemsCategoryName = itemsInCategories.querySelector('h2').textContent;
 

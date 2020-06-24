@@ -1,14 +1,12 @@
 'use strict';
 import galleryData from '../gallery-items.js';
 
-const addImages = galleryData.reverse().map((image) => {
-	document
-		.querySelector('.js-gallery')
-		.insertAdjacentHTML(
-			'afterbegin',
-			`<li class="gallery__item"><a class="gallery__link" href="${image.original}"><img class="gallery__image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"></a></li>`
-		);
+const addImages = galleryData.map((image) => {
+	return `<li class="gallery__item"><a class="gallery__link" href="${image.original}"><img class="gallery__image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"></a></li>`;
 });
+document
+	.querySelector('.js-gallery')
+	.insertAdjacentHTML('afterbegin', addImages.join(''));
 
 const gallery = document.querySelector('.js-gallery');
 
