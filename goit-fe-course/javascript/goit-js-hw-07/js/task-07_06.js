@@ -18,10 +18,10 @@ document
 		}
 	});
 
-document
-	.querySelector('#validation-input')
-	.addEventListener('focus', (event) => {
-		const textInput = document.querySelector('#validation-input');
-		textInput.classList.remove('valid');
-		textInput.classList.remove('invalid');
-	});
+// document
+// 	.querySelector('#validation-input')
+// 	.addEventListener('focus', (event) => {
+// 		const textInput = document.querySelector('#validation-input');
+// 		textInput.classList.remove('valid');
+// 		textInput.classList.remove('invalid');
+// 	});
