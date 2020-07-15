@@ -1,0 +1,14 @@
+
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/.babelrc
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/.browserslistrc
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/.editorconfig
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/.prettierrc
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/package-lock.json
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/postcss.config.js
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/README.md
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/src/styles.css
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/webpack/config.js
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/webpack/configs/development.js
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/webpack/configs/production.js
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/webpack/configs/shared.js
+goit-fe-course/javascript/goit-js-hw-10-food-service/hw10/webpack/utils/paths.js
