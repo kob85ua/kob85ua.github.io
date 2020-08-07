@@ -2,97 +2,91 @@
 console.log('Hello');
 
 import searchState from './fetchCountries.js';
+
 import stateInfoTemplate from './hbsTemplates/stateInfo.hbs';
+
 import stateListTemplate from './hbsTemplates/stateList.hbs';
 
+import './styles.css';
+
 import { alert, notice, info, success, error } from '@pnotify/core';
-// import '@pnotify/core/dist/PNotify.css';
-// import '@pnotify/core/dist/BrightTheme.css';
-// import '@pnotify/core/dist/Material.css';
-// import { defaults } from '@pnotify/core';
-// defaults.width = '400px';
-// defaults.styling = 'material';
-// defaults.icons = 'material';
+
+import '@pnotify/core/dist/PNotify.css';
+
+import '@pnotify/core/dist/BrightTheme.css';
+
+import { defaults } from '@pnotify/core';
 // import {notice, defaultModules} from '@pnotify/core';
 // import * as PNotifyDesktop from '@pnotify/desktop';
-
 // const myNotice = notice({
-//   text: "I'm a notice.",
-//   modules: new Map([
-//     ...defaultModules,
-//     [PNotifyDesktop, {
-// 	  // Desktop Module Options
-// 	  styling: 'brighttheme'
-//     }]
-//   ])
-// });
+// 	text: "I'm a notice.",
+// 	modules: new Map([
+// 	  ...defaultModules,
+// 	  [PNotifyDesktop, {
+
+// 	  }]
+// 	])
+//   });
+
+// import {notice, defaultModules} from '@pnotify/core';
+// import * as PNotifyConfirm from '@pnotify/confirm';
+// defaultModules.set(PNotifyMobile, {});
+// error.close()
+defaults.delay = Infinity;
+defaults.closer = true;
+defaults.sticker = false;
+// defaults.hide=true
+// defaults.remove=false
+
 const _ = require('lodash');
+
 const refs = {
-    searchForm: document.querySelector('#search-form'),
-    searchStateInput: document.querySelector('#state-search'),
+	pageBody: document.querySelector('#page-body'),
+
+	searchForm: document.querySelector('#search-form'),
+
+	searchStateInput: document.querySelector('#state-search'),
+
 	stateList: document.querySelector('#state-list'),
+
+	errorNotice: document.querySelector('.pnotify'),
 };
 
+// refs.stateList.addEventListener('input', errorNoticeCleaner());
+refs.searchStateInput.addEventListener(
+	'input',
+	_.debounce(searchFormHandler, 1000)
+);
 
-
-
-refs.searchForm.addEventListener('input', _.debounce(searchFormHandler, 500));
-
-
+// const newLocal = error.close();
 function searchFormHandler(e) {
+	e.preventDefault()
+	// refs.pageBody.removeChild("div")
+	// defaults.hide=true
+	// refs.errorNotice.innerHTML=''
+	// defaults.delay= 0
+	// error.close()
+	// notice.getState()
+	// console.log(error.refs.container)
+	// document.querySelector('.pnotify').remove()
+	// if (document.querySelector('.pnotify') != null) {document.querySelector('.pnotify').remove(); return tagAdder()}
+	// console.log(error.refs.elem)
+	// console.log(refs.errorNotice)
+	console.log(refs.pageBody);
+	// console.log(document.querySelector('.pnotify').innerHTML);
+	// console.log(refs.errorNotice.innerHTML)
+	if (refs.stateList.innerHTML != '') {
+		tagCleaner();
+		return tagAdder();
+	}
 	
-	console.log(refs.searchStateInput.value)
-	const searchQuery = refs.searchStateInput.value;
-    
+	else {
+		return tagAdder();
+	}
 	
 
-	searchState.fetchCountries(searchQuery).then((data) => {
-		console.log(data);
-	    console.log(data.length);
-		let markup;
-		if (data.length===undefined) {
-			error('No matches found. Please enter another query!');
-		}
-		else if (data.length > 10) {
-			error('Too many matches found. Please enter a more specific query!');
-            // data=[{name:'Too many matches!'}]
-			// markup = buildStateListMarkup(data);
-			
-		} else if (data.length > 1) {
-			markup = buildStateListMarkup(data);
-			insertStateInfoItem(markup);
-			
-		} else if (data.length = 1) {
-			markup = buildOneStateInfoMarkup(data);
-			insertStateInfoItem(markup);
-		} 
-		
-        // console.log(markup)
-		// insertStateInfoItem(markup);
-	});
+	
 }
-
-// const searchQuery = 'itfdgdf';
-
-// searchState.fetchCountries(searchQuery).then((data) => {
-// 	console.log(data);
-// 	console.log(data.length);
-// 	let markup;
-// 	if (data.length > 10) {
-// 		data=[{name:'Too many matches!'}]
-// 		markup = buildStateListMarkup(data);
-// 	} else if (data.length > 1) {
-// 		markup = buildStateListMarkup(data);
-		
-// 	} else if ((data.length = 1)) {
-// 		markup = buildOneStateInfoMarkup(data);
-		
-// 	} else {
-// 		data.message=[{name:'No matches found!'}]
-// 		markup=buildOneStateInfoMarkup(data)}
-
-// 	insertStateInfoItem(markup);
-// });
 
 function insertStateInfoItem(item) {
 	refs.stateList.insertAdjacentHTML('afterbegin', item);
@@ -106,3 +100,32 @@ function buildStateListMarkup(item) {
 	return stateListTemplate(item);
 }
 
+function tagCleaner() {
+	refs.stateList.innerHTML = '';
+}
+
+function errorNoticeCleaner() {
+	document.querySelector('.pnotify').remove();
+}
+
+function tagAdder() {
+	const searchQuery = refs.searchStateInput.value;
+	searchState.fetchCountries(searchQuery).then(data => {
+		let markup;
+		if (data.length === undefined) {
+			
+			error('No matches found. Please enter another query!');
+		} else if (data.length >= 10) {
+		
+			error('Too many matches found. Please enter a more specific query!');
+		} else if (data.length > 1 && data.length < 10) {
+			markup = buildStateListMarkup(data);
+			insertStateInfoItem(markup);
+		} else if ((data.length = 1)) {
+			markup = buildOneStateInfoMarkup(data);
+			insertStateInfoItem(markup);
+		}
+	});
+}
+
+console.log(refs.pageBody);

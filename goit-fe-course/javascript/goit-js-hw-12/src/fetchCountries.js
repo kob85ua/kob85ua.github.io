@@ -4,7 +4,6 @@ export default {
 	fetchCountries(query) {
 		const requestParams = `${query}?fields=name;capital;population;languages;flag`;
 
-		return fetch(baseUrl + requestParams).then((response) => response.json());
+		return fetch(baseUrl + requestParams).then(response => response.json());
 	},
-	
 };

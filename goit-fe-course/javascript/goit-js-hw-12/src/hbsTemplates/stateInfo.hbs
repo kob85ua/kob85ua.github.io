@@ -1,5 +1,5 @@
 {{#each this}}
-<li class="state__item">
+<li class="state__oneItem">
   <div class="state">
     <h1 class="state__name">{{name}}</h1>
     <div class="state__info">
@@ -9,23 +9,24 @@
         </div>
         <div class="population__info">
             <h2 class="population">Population:</h2>
-            <h2 class="capital__name">{{population}}</h2>
+            <h2 class="population__number">{{population}}</h2>
         </div>
         
-        <ul class="language-list">Languages:
+        <h2 class="language-list">Languages:
         {{#each languages}}
-        <li class="tag-list__item">{{this.name}}</li>
+        <li class="lang-list__item">{{this.name}}</li>
         {{/each}}
-        </ul>
-        <img
-         src="{{flag}}"
-         alt="{{name}}"
-         class="state__flagimage"
-         />
+        </h2>
+        
       
     </div>
 
     
   </div>
+       <img
+         src="{{flag}}"
+         alt="{{name}}"
+         class="state__flagimage"
+         />
 </li>
 {{/each}}

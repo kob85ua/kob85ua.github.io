@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+   
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: beige ;
+    
+
+}
+
+
+.state__oneItem {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.capital__info, .population__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.state__flagimage, .state{
+    width: 40%;
+    height: auto;
+    
+}
+
+
+.capital__name, .population__number, .lang-list__item {
+    font-weight: lighter;
+}
+
+.capital__info, .population__info, .language-list{
+    font-weight: bold;
+}
+
+.lang-list__item{
+    display: flex;
+    
+    padding-left: 60%;
+}
