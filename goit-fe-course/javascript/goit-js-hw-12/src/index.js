@@ -60,7 +60,10 @@ refs.searchStateInput.addEventListener(
 
 // const newLocal = error.close();
 function searchFormHandler(e) {
-	e.preventDefault()
+	e.preventDefault();
+
+	searchState.searchQuery = e.target.value;
+	// removeError()
 	// refs.pageBody.removeChild("div")
 	// defaults.hide=true
 	// refs.errorNotice.innerHTML=''
@@ -75,17 +78,14 @@ function searchFormHandler(e) {
 	console.log(refs.pageBody);
 	// console.log(document.querySelector('.pnotify').innerHTML);
 	// console.log(refs.errorNotice.innerHTML)
-	if (refs.stateList.innerHTML != '') {
+	if (refs.stateList.innerHTML !== '') {
+		// errorNoticeCleaner()
 		tagCleaner();
-		return tagAdder();
+		// return tagAdder();
+	} else {
+		// errorNoticeCleaner()
+		tagAdder();
 	}
-	
-	else {
-		return tagAdder();
-	}
-	
-
-	
 }
 
 function insertStateInfoItem(item) {
@@ -105,27 +105,31 @@ function tagCleaner() {
 }
 
 function errorNoticeCleaner() {
-	document.querySelector('.pnotify').remove();
+	document.querySelector('[data-pnotify]').remove();
 }
 
 function tagAdder() {
-	const searchQuery = refs.searchStateInput.value;
-	searchState.fetchCountries(searchQuery).then(data => {
+	searchState.fetchCountries().then(data => {
 		let markup;
 		if (data.length === undefined) {
-			
-			error('No matches found. Please enter another query!');
+			markup = error('No matches found. Please enter another query!');
 		} else if (data.length >= 10) {
-		
-			error('Too many matches found. Please enter a more specific query!');
+			markup = error(
+				'Too many matches found. Please enter a more specific query!'
+			);
 		} else if (data.length > 1 && data.length < 10) {
+			console.log(data);
 			markup = buildStateListMarkup(data);
 			insertStateInfoItem(markup);
 		} else if ((data.length = 1)) {
 			markup = buildOneStateInfoMarkup(data);
 			insertStateInfoItem(markup);
 		}
-	});
+		// insertStateInfoItem(markup);
+	}).catch(dataError=>{console.log(dataError)});
 }
-
-console.log(refs.pageBody);
+function removeError() {
+	error.close();
+	error.fire('pnotify:cancel', { error });
+}
+// console.log(refs.pageBody);
