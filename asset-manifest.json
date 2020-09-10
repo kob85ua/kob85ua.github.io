@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/ghpages-deployment/static/js/main.c72c15d1.chunk.js",
-    "main.js.map": "/ghpages-deployment/static/js/main.c72c15d1.chunk.js.map",
-    "runtime-main.js": "/ghpages-deployment/static/js/runtime-main.06be8fc5.js",
-    "runtime-main.js.map": "/ghpages-deployment/static/js/runtime-main.06be8fc5.js.map",
-    "static/js/2.67f8c7c8.chunk.js": "/ghpages-deployment/static/js/2.67f8c7c8.chunk.js",
-    "static/js/2.67f8c7c8.chunk.js.map": "/ghpages-deployment/static/js/2.67f8c7c8.chunk.js.map",
-    "index.html": "/ghpages-deployment/index.html",
-    "precache-manifest.38af74b8f12e33bb43240b21ff95cee2.js": "/ghpages-deployment/precache-manifest.38af74b8f12e33bb43240b21ff95cee2.js",
-    "service-worker.js": "/ghpages-deployment/service-worker.js",
-    "static/js/2.67f8c7c8.chunk.js.LICENSE.txt": "/ghpages-deployment/static/js/2.67f8c7c8.chunk.js.LICENSE.txt"
+    "main.js": "/static/js/main.c72c15d1.chunk.js",
+    "main.js.map": "/static/js/main.c72c15d1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0a541afb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0a541afb.js.map",
+    "static/js/2.fdc64e0e.chunk.js": "/static/js/2.fdc64e0e.chunk.js",
+    "static/js/2.fdc64e0e.chunk.js.map": "/static/js/2.fdc64e0e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.aba4b6e2b03729bc67debee89b71c840.js": "/precache-manifest.aba4b6e2b03729bc67debee89b71c840.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.fdc64e0e.chunk.js.LICENSE.txt": "/static/js/2.fdc64e0e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.06be8fc5.js",
-    "static/js/2.67f8c7c8.chunk.js",
+    "static/js/runtime-main.0a541afb.js",
+    "static/js/2.fdc64e0e.chunk.js",
     "static/js/main.c72c15d1.chunk.js"
   ]
 }
